@@ -23,5 +23,3 @@ app.listen(PORT,(err)=>{
         return}
     console.log("Listening at port :"+PORT);
 })
-
-exports.app = functions.https.onRequest(app);
