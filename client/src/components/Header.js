@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 const Header= ()=>{
-    const [value,setValue]=useState(0);
+    const [value,setValue]=useState(1);
 
     const handleOnChange=(e,val)=>{
         setValue(val);

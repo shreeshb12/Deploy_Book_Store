@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import React from 'react'
 
 const Book = (props) => {
+    console.log(props.book);
     const index=props.index;
     const dynamicDelay={
         transitionDelay:`${index * 1}s`

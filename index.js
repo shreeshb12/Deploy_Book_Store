@@ -9,10 +9,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 //cors policy doesn't allow to send the data to another server
 app.use(cors());
-app.use('/api',require('./routes/book-routes'))
+
 app.use(express.static(path.resolve((__dirname),"client","build")));
-//middleware
-app.get('/',(req,res,next)=>{
+
+app.use('/api',require('./routes/book-routes'))
+
+app.get('/*',(req,res,next)=>{
     res.sendFile(path.resolve((__dirname),"client","build","index.html"));
 });
 

@@ -2,21 +2,22 @@ import React, { useEffect, useState } from 'react'
 import Book from './sub components/book';
 import '../styles/book.css'
 import axios from "axios"
+import { useBooks } from '../hooks/CustomHooks';
 
-const url=`${window.location.origin}/api/book`;
+// const url=`${window.location.origin}/book`;
 const Books = () => {
-  const [books,setBooks]=useState([]);
-  try{
-  const fetchBooks=async ()=>{
-    const res=(await (axios.get(url))).data;
-    return res;}
-    useEffect(()=>{
-      fetchBooks().then(data=>setBooks(data.Books));
-    },[]);
-  }catch(err){
-    console.log(err);
-  }
-  
+  // const [books,setBooks]=useState([]);
+  // const fetchBooks=async ()=>{
+  //   const res=(await (axios.get(url))).data;
+  //   return res;
+  // }
+  // useEffect(()=>{
+  //   fetchBooks().then(data=>setBooks(data.Books));
+  // },[]);
+  const bks=useBooks();
+  const books=bks.books;
+  console.log(bks);
+  console.log(books);
   
   return (
     <>

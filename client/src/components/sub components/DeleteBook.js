@@ -16,7 +16,7 @@ const DeleteBook = () => {
             navigate('../../');
         }
         deleteBook();
-    },[id,navigate])
+    },[id])
   return (
     <div>DeleteBook</div>
   )
