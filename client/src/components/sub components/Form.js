@@ -2,11 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Box, FormControl, InputLabel, OutlinedInput, Button, Checkbox ,FormControlLabel, FormGroup} from '@mui/material';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { useBooks } from '../../hooks/CustomHooks';
 
 const Form = (props) => {
     const navigate=useNavigate();
-    const bks=useBooks();
     const [bookDetails,setBookDetails]=useState({
         _id:"",
         name:"",
@@ -122,7 +120,9 @@ const Form = (props) => {
               <Checkbox name="available" id="available" checked={bookDetails.available} onChange={handleChange}/>
             } sx={{margin:'5px'}}
           /><br/>
-          <img src={bookDetails.image} alt='no-img' height={'200px'} width={'150px'}/>
+          <div className='bookPoster'>
+            <img src={bookDetails.image} alt='no-img' height={'200px'} width={'150px'}/>
+          </div>
 
         <Button style={{margin:'5px'} } type='submit' variant="contained" >Submit</Button>
       </FormGroup>

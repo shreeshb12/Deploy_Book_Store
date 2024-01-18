@@ -15,7 +15,6 @@ const Header= ()=>{
                 <Tabs sx={{ml:"auto"}} textColor="inherit" TabIndicatorProps={{style:{backgroundColor:'#a6aeb3'}}} value={value} onChange={handleOnChange}>
                     <Tab LinkComponent={NavLink} to="/add" label="Add Book"/>
                     <Tab LinkComponent={NavLink} to="/books" label="All Books"/>
-                    <Tab LinkComponent={NavLink} to="/about" label="About Us"/>
                 </Tabs>
             </Toolbar>
         </AppBar>
