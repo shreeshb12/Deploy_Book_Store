@@ -6,7 +6,6 @@ import Form from './Form';
 const BookDetail = () => {
   const { id } = useParams();
   const [bookDetails, setBookDetails] = useState('');
-  const [name,author,description,price,available,image]=JSON.parse(bookDetails);
 
   //fetch the book details by id and set the value
   useEffect(() => {

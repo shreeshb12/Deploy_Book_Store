@@ -77,4 +77,10 @@ h3{
     justify-content: space-between;
 }
 
+.bookPoster{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
 
