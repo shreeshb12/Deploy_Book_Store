@@ -3,7 +3,7 @@ import Book from './sub components/book';
 import '../styles/book.css'
 import axios from "axios"
 
-const url="http://localhost:5000/api/book";
+const url=`${window.location.origin}/api/book`;
 const Books = () => {
   const [books,setBooks]=useState([]);
   const fetchBooks=async ()=>{
